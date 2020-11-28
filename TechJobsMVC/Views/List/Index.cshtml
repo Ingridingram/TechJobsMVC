@@ -11,9 +11,13 @@
         }
     </tr>
     <tr>
-        @{
-            //TODO #2: Complete the View Jobs By Category Table
+        @foreach(var job in ViewBag.Jobs)
+        {
+            <li>
+                <a asp-controller="All" asp-action="Jobs" asp-route-column="@job.Key"></a>
+            </li>
         }
+
 
         <td></td> @* Feel free to remove or modify this element if necessary. *@
         @foreach (var category in ViewBag.tableChoices)

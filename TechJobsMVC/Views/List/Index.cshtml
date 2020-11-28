@@ -11,7 +11,7 @@
         }
     </tr>
     <tr>
-        @foreach(var job in ViewBag.Jobs)
+        @foreach(var job in ViewBag.jobs)
         {
             <li>
                 <a asp-controller="All" asp-action="Jobs" asp-route-column="@job.Key"></a>
